@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link href="assets/favicon.ico" rel="shortcut icon" /> -->
+  <title>momentum</title>
+</head>
+<body>
+  <!-- <div class="loader-wrapper">
+    <div class="loader">
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div> -->
+  <header class="header">
+    <div class="player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="audio-player">
+      <div class="audio-player-main">
+        <img class="audio-img">
+        <p class="audio-name"></p>
+        <div class="audio-range">
+          <div class="audio-timeline">
+            <div class="audio-progress"></div>
+          </div>
+          <div class="audio-times">
+            <span class="audio-current-time">0:00</span>
+            <span class="audio-duration"></span>
+          </div>
+        </div>
+        <div class="audio-controls">
+          <button class="btn audio-random audio-random_active"></button>
+          <button class="btn audio-prev"></button>
+          <button class="btn audio-play a-play"></button>
+          <button class="btn audio-next"></button>
+          <button class="btn audio-loop audio-loop_active"></button>
+        </div>
+      </div>
+      <ul class="auido-player-playlist"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" placeholder="[Enter city name]" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="feels-like"></div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter Name]"/>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="row">
+      <div class="column settings">
+        <div class="settings-icon"></div>
+        <div class="settings-list">
+          <div class="settings-lang">
+            <p class="setting-name">Language</p>
+            <div class="lang-list settings-options">
+              <label class="checkbox-container">En
+                <input class="lang-radio" type="radio" name="radio-lang" value="en">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">Ru
+                <input class="lang-radio" type="radio" name="radio-lang" value="ru">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-time">
+            <p class="setting-name">Time</p>
+            <div class="settings-options">
+              <label class="checkbox-container">Display
+                <input type="checkbox" name="checkbox-time">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <!-- <div class="settings-time-format">
+            <p class="setting-name">Time Format</p>
+            <div class="settings-options">
+                <label class="checkbox-container">24
+                  <input class="time-format-radio" type="radio" name="radio-time-format" value="ru">
+                  <span class="checkmark"></span>
+                </label>  
+              <label class="checkbox-container">12
+                <input class="time-format-radio" type="radio" name="radio-time-format" value="en">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div> -->
+          <div class="settings-date">
+            <p class="setting-name">Date</p>
+            <div class="settings-options">
+              <label class="checkbox-container">Display
+                <input type="checkbox" name="radio-date">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-greeting">
+            <p class="setting-name">Greeting</p>
+            <div class="settings-options">
+              <label class="checkbox-container">Display
+                <input type="checkbox" name="checkbox-greeting" class="greet">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-weather">
+            <p class="setting-name">Weather</p>
+            <div class="settings-options">
+              <label class="checkbox-container">Display
+                <input type="checkbox" name="checkbox-weather">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-player">
+            <p class="setting-name">Audio Player</p>
+            <div class="settings-options">
+              <label class="checkbox-container">Default
+                <input  class="radio-player" type="radio" name="radio-player" value="default">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">Advanced
+                <input class="radio-player" type="radio" name="radio-player" value="advanced">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">Off
+                <input class="radio-player" type="radio" name="radio-player" value="off">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-quote">
+            <p class="setting-name">Quotes</p>
+            <div class="settings-options">
+              <label class="checkbox-container">Display
+                <input type="checkbox" name="checkbox-quote">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-todo">
+            <p class="setting-name">Todo</p>
+            <div class="settings-options">
+              <label class="checkbox-container">Display
+                <input type="checkbox" name="checkbox-todo">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column quote-container">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+      <div class="column todo">
+        <p class="todo-title">Todo</p>
+        <div class="todo-container">
+          <h5>Todos</h5>
+          <div class="todo-items">
+          </div>
+          <div class="todo-add">
+            <input type="text" class="todo-input" placeholder="Add New Todo"/>
+            <button class="btn btn-add-todo">Add todo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
